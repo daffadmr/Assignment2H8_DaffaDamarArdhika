@@ -1,0 +1,204 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css ">
+</head>
+
+<body>
+
+    <!-- navbar  -->
+    <nav>
+        <div class="mobile-nav">
+            <div class="logo">Logo</div>
+            <div class="hamburger"><button onclick="showNav()">Menu</button></div>
+        </div>
+        <ul class="nav-kanan menu">
+            <li class="menu-item"><a href="./home.html">Home</a></li>
+            <li class="menu-item"><a href="#">Product</a></li>
+            <li class="menu-item"><a href="#">Gallery</a></li>
+            <li class="menu-item"><a href="./blog.html">Blog</a></li>
+            <li class="menu-item"><a href="#">Inventory</a></li>
+        </ul>
+
+
+    </nav>
+
+    <!-- profile -->
+    <section>
+        <div class="container">
+            <div class="profile">
+                <div class="left-profile">
+                    <div class="foto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLLwllkqgrK2iDNHU1EZ9Jv1W3qrJ9LICYf1-KK-16aOSC3Bweor7y5cM2HrM4XKrJmg&usqp=CAU"
+                            alt="" width="200px">
+                    </div>
+                    <div class="tulisan">
+                        <h1 class="dataNama">Daffa Damar Ardhika</h1>
+                        <p class="dataRole">Front End Designer</p>
+                        <button class="edit" onclick="editFunction()">Edit</button>
+                        <button class="resume">Resume</button>
+                    </div>
+                </div>
+                <div class="right-profile">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td class="table-kiri"><b>Avaibility</b></td>
+                            <td class="dataAvaibility">Fulltime</td>
+                        </tr>
+                        <tr>
+                            <td class="table-kiri">
+                                <b>Usia</b>
+                            </td>
+                            <td class="dataUsia">
+                                20
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-kiri">
+                                <b>Lokasi</b>
+                            </td>
+                            <td class="dataLokasi">
+                                Jakarta
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-kiri"><b>Pengalaman</b></td>
+                            <td class="dataExperience">2 Tahun</td>
+                        </tr>
+                        <tr>
+                            <td class="table-kiri"><b>Email</b></td>
+                            <td class="dataEmail">daffaardhika@gmail.com</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- form -->
+    <section>
+        <div class="container">
+            <div class="form">
+                <form action="">
+                    <div class="form-item">
+                        <label class="form-label" for="nama">Nama</label>
+                        <input class="input-form nama" type="text" name="nama" id="nama"
+                            placeholder=" Masukan nama anda ...">
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="role">Role</label>
+                        <input class="input-form role" type="text" name="role" id="role"
+                            placeholder=" Masukan role anda ..." />
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="avaibility">Avaibility</label>
+                        <input class="input-form avaibility" type="text" name="avaibility" id="avaibility"
+                            placeholder=" Masukan avaibility anda ..." />
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="usia">Usia</label>
+                        <input class="input-form usia" type="text" name="usia" id="usia"
+                            placeholder=" Masukan usia anda ..." />
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="lokasi">Lokasi</label>
+                        <input class="input-form lokasi" type="text" name="lokasi" id="lokasi"
+                            placeholder=" Masukan lokasi anda ..." />
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="years Experience">Years Experience</label>
+                        <input class="input-form experience" type="text" name="" id=""
+                            placeholder=" Masukan year experience anda ..." />
+                    </div>
+                    <div class="form-item">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="input-form email" type="email" name="email" id="email"
+                            placeholder=" Masukan email anda ..." />
+                    </div>
+                    <button type="button" onclick="updateFunction()">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+        let iniForm = document.querySelector(".form");
+
+        let navKanan = document.querySelector(".nav-kanan")
+
+        let inputNama = document.querySelector(".nama");
+        let inputRole = document.querySelector(".role");
+        let inputAvaibility = document.querySelector(".avaibility");
+        let inputUsia = document.querySelector(".usia");
+        let inputLokasi = document.querySelector(".lokasi");
+        let inputExperience = document.querySelector(".experience");
+        let inputEmail = document.querySelector(".email");
+
+        let displayNama = document.querySelector(".dataNama");
+        let displayRole = document.querySelector(".dataRole");
+        let displayAvaibility = document.querySelector(".dataAvaibility");
+        let displayUsia = document.querySelector(".dataUsia");
+        let displayLokasi = document.querySelector(".dataLokasi");
+        let displayExperience = document.querySelector(".dataExperience");
+        let displayEmail = document.querySelector(".dataEmail");
+
+        function tampilkanForm() {
+            if (iniForm.style.display == 'block') {
+                iniForm.style.display = 'none';
+            } else {
+                iniForm.style.display = 'block';
+            }
+        }
+
+        function tampilkanData() {
+            inputNama.value = displayNama.innerText;
+            inputRole.value = displayRole.innerText;
+            inputAvaibility.value = displayAvaibility.innerText;
+            inputUsia.value = displayUsia.innerText;
+            inputLokasi.value = displayLokasi.innerText;
+            inputExperience.value = displayExperience.innerText;
+            inputEmail.value = displayEmail.innerText;
+        }
+
+        function editFunction() {
+            tampilkanData();
+            tampilkanForm();
+        }
+
+        function updateFunction() {
+            ubahData();
+            tampilkanForm();
+        }
+
+        function ubahData() {
+            displayNama.innerText = inputNama.value;
+            displayRole.innerText = inputRole.value;
+            displayAvaibility.innerText = inputAvaibility.value;
+            displayUsia.innerText = inputUsia.value;
+            displayLokasi.innerText = inputLokasi.value;
+            displayExperience.innerText = inputExperience.value;
+            displayEmail.innerText = inputEmail.value;
+        }
+
+        function showNav(){
+            if (navKanan.style.display == 'flex') {
+                navKanan.style.display = 'none';
+            } else {
+                navKanan.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+
+</html>

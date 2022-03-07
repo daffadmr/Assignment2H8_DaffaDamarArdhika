@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c7e0ff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 0px 300px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  box-shadow: 0 8px 6px -6px grey;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  justify-content: end;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  color: #719bce;
+}
+
+nav li {
+  padding-right: 20px;
+  font-size: 14px;
+}
+
+.mobile-nav{
+  display: flex;
+  justify-content: space-between;
+  gap: 250px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.profile {
+  border-radius: 5px;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: left;
+}
+
+.profile .tulisan p {
+  margin-top: -20px;
+}
+
+.profile button {
+  width: 80px;
+  text-align: center;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.profile .edit {
+  background-color: #1a457a;
+  color: white;
+}
+
+.profile .edit:hover {
+  background-color: #346096;
+  color: white;
+}
+
+.profile .edit:active {
+  background-color: #1b314b;
+  color: white;
+}
+
+.profile .resume {
+  background-color: white;
+  color: green;
+  border-color: green;
+}
+
+.profile .resume:hover {
+  background-color: rgb(188, 228, 186);
+  color: white;
+}
+
+.profile .resume:active {
+  background-color: rgb(74, 146, 70);
+  color: white;
+}
+
+.left-profile {
+  display: flex;
+  margin-right: 100px;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.left-profile img {
+  width: 200px;
+  height: 200px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.right-profile {
+  align-items: center;
+  padding: 20px;
+  margin-right: 100px;
+  margin-top: 30px;
+}
+
+.table-kiri {
+  padding-right: 50px;
+}
+
+.form {
+  display: none;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  margin: 10px auto;
+}
+
+.form-item {
+  margin-bottom: 10px;
+}
+
+.input-form {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form button {
+  width: 100%;
+  font-weight: bold;
+  height: 35px;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
